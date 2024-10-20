@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Masukan Soeharto</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- CSS Khusus -->
+    <style>
+        .sidebar {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <h1>Formulir Masukan Soeharto</h1>
+            <p>Beri Masukan atau Informasi Tambahan</p>
+        </div>
+    </header>
+
+    <!-- Kontainer Utama -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-12 col-md-4 col-lg-3 sidebar">
+                <h2 class="h5">Menu Navigasi</h2>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="index.html">Halaman Utama</a></li>
+                    <li class="list-group-item"><a href="form.html">Halaman Formulir</a></li>
+                    <li class="list-group-item"><a href="table.html">Halaman Tabel</a></li>
+                    <li class="list-group-item"><a href="https://id.wikipedia.org/wiki/Soeharto" target="_blank">Wikipedia Soeharto</a></li>
+                </ul>
+            </nav>
+
+            <!-- Konten Utama -->
+            <main class="col-12 col-md-8 col-lg-9">
+                <h2 class="h4 mb-4">Isi Formulir di Bawah Ini</h2>
+                <form action="submit_data.php" method="GET">
+                    <!-- Field 1: Masukan/Informasi Tambahan -->
+                    <div class="form-group">
+                        <label for="saran">Masukan/Informasi Tambahan:</label>
+                        <textarea class="form-control" id="comment" name="comment" rows="4" required></textarea>
+                    </div>
+                    <!-- Field 2: Tanggal Penghargaan/Pencapaian/Momen Penting -->
+                    <div class="form-group">
+                        <label for="dob">Tanggal Peristiwa:</label>
+                        <input type="date" class="form-control" id="dob" name="dob" required>
+                    </div>
+                    <!-- Field 3: Kategori -->
+                    <div class="form-group">
+                        <label>Kategori:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="phg" name="category" value="phg" required>
+                            <label class="form-check-label" for="phg">Penghargaan</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="pcp" name="category" value="pcp" required>
+                            <label class="form-check-label" for="pcp">Pencapaian</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="mp" name="category" value="mp" required>
+                            <label class="form-check-label" for="mp">Momen Penting</label>
+                        </div>
+                    </div>
+                    <!-- Field 4: Kewarganegaraan -->
+                    <div class="form-group">
+                        <label>Kewarganegaraan:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="kwn1" name="nationality[]" value="WNI">
+                            <label class="form-check-label" for="kwn1">Warga Negara Indonesia</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="kwn2" name="nationality[]" value="WNA">
+                            <label class="form-check-label" for="kwn2">Warga Negara Asing</label>
+                        </div>
+                    </div>
+                    <!-- Field 5: email -->
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <!-- Field 6: Kata Sandi -->
+                    <div class="form-group">
+                        <label for="password">Kata Sandi:</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <!-- Tombol Submit -->
+                    <button type="submit" class="btn btn-primary">Kirim</button>
+                </form>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Website Profil Soeharto | Semua Hak Cipta Dilindungi</p>
+            <p>Periode Pembuatan: 16 Oktober 2024 - 20 Oktober 2024 | Ujian Tengah Semester</p>
+            <p>Kontak: dhian.121140055@student.itera.ac.id</p>
+        </div>
+    </footer> 
+
+    <!-- Bootstrap JS dan dependensi -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
